@@ -1,0 +1,103 @@
+.sidebar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: get-vw(77);
+  background-color: #000f25;
+
+  &__logo {
+    @include absoluteCenterX();
+    top: get-vw(-18);
+    width: get-vw(77);
+    height: get-vw(77);
+
+    img {
+      display: none;
+      width: 100%;
+
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+
+  &__version {
+    display: none;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .sidebar {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .sidebar {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .sidebar {
+    display: block;
+    top: 0;
+    width: 224px;
+    height: auto;
+    padding: 0 26px;
+
+    &__head {
+      height: 210px;
+      padding-top: 35px;
+    }
+
+    &__logo {
+      display: block;
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 168px;
+      height: 24px;
+      margin-bottom: 39px;
+
+      img {
+        display: block;
+
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: calc(100vh - 210px);
+      padding-top: 22px;
+    }
+
+    &__version {
+      display: block;
+      margin-bottom: 13px;
+      font-size: 10px;
+      text-transform: uppercase;
+      @include main-fontItalic();
+
+      a,
+      a:visited {
+        color: rgb(13, 121, 135);
+        transition: color $duration $easing;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .sidebar {
+
+  }
+}
+

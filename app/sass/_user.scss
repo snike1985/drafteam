@@ -1,0 +1,66 @@
+.user {
+  display: none;
+}
+@media (min-width: $phone-landscape) {
+  .user {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .user {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .user {
+    display: flex;
+    align-items: center;
+
+    &__ava {
+      overflow: hidden;
+      display: block;
+      position: relative;
+      width: 41px;
+      height: 41px;
+      margin-right: 20px;
+      border: 2px solid #74dd92;
+      border-radius: 50%;
+      transition: border $duration $easing;
+
+      img {
+        @include absoluteCenter();
+        height: 100%;
+      }
+    }
+
+    &__info {
+      font-size: 16px;
+      color: rgb(13, 132, 144);
+      text-transform: uppercase;
+
+      strong {
+        display: block;
+        padding-top: 1px;
+        transition: color $duration $easing;
+        @include main-fontBold();
+      }
+    }
+
+    &:hover {
+
+      .user__ava {
+        border-color: #fff;
+      }
+
+      .user__info strong {
+        color: #fff;
+      }
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .user {
+
+  }
+}
+

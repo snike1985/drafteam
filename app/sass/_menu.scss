@@ -1,0 +1,44 @@
+.menu {
+  display: none;
+}
+@media (min-width: $phone-landscape) {
+  .menu {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .menu {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+
+    &__item {
+      display: block;
+      margin: 0 0 23px 0;
+      font-size: 12px;
+      color: rgb(255, 255, 255);
+      text-transform: uppercase;
+      transition: color $duration $easing;
+
+      &:hover {
+        color: rgb(90, 197, 131);
+      }
+    }
+
+    &__footer {
+      padding-top: 31px;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .menu {
+
+  }
+}
+

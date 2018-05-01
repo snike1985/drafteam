@@ -1,0 +1,36 @@
+.site {
+  @include main-font();
+
+  &__header {
+    height: 94px;
+    background-color: #000f25;
+  }
+
+  &__content {
+
+  }
+}
+@media (min-width: $phone-landscape) {
+  .site {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .site {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .site {
+
+    &__header {
+      height: 173px;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .site {
+
+  }
+}
+

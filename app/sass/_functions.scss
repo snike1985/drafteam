@@ -1,0 +1,16 @@
+
+// For scalable designs
+
+//returns vw from pixels
+//@function get-vw($target) {
+//  $vw-context: (1000*.01) * 1px;
+//  @return ($target/$vw-context) * 1vw;
+//}
+
+@function get-vw($px) {
+  @return (100vw*$px/640);
+}
+
+@function get-vw-desktop($px) {
+  @return (100vw*$px/1980);
+}
